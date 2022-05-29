@@ -87,13 +87,13 @@ async def next_page(bot, query):
 
     btn.insert(0, 
         [
-            InlineKeyboardButton(f'🔰 {search} 🔰', 'dupe')
+            InlineKeyboardButton(f'📣 {search} 📣', 'dupe')
         ]
     )
     btn.insert(1,
         [
-            InlineKeyboardButton(f'📁 Files: {len(files)}', 'dupe'),
-            InlineKeyboardButton(f'‼️ Tips', 'tips')
+            InlineKeyboardButton(f'📁 𝖳𝗈𝗍𝖺𝗅 𝖥𝗂𝗅𝖾𝗌: {len(files)}', 'dupe'),
+            InlineKeyboardButton(f'Tips 😜', 'tips')
         ]
     )
 
@@ -149,7 +149,7 @@ async def advantage_spoll_choker(bot, query):
             k = (movie, files, offset, total_results)
             await auto_filter(bot, query, k)
         else:
-            k = await query.message.edit('𝚃𝙷𝙸𝚂 𝙼𝙾𝚅𝙸𝙴 I𝚂 𝙽𝙾𝚃 𝚈𝙴𝚃 𝚁𝙴𝙻𝙴𝙰𝚂𝙴𝙳 𝙾𝚁 𝙰𝙳𝙳𝙴𝙳 𝚃𝙾 𝙳𝙰𝚃𝙰𝙱𝙰𝚂𝙴 💌 𝘾𝙤𝙣𝙩𝙖𝙘𝙩 𝘼𝙙𝙢𝙞𝙣 𝙩𝙤 𝘼𝘿𝘿 𝙩𝙝𝙞𝙨 𝙁𝙄𝙇𝙀📂')
+            k = await query.message.edit('𝖳𝗁𝗂𝗌 𝖬𝗈𝗏𝗂𝖾 𝖨𝗌 𝖭𝗈𝗍 𝖸𝖾𝗍 𝖱𝖾𝗅𝖾𝖺𝗌𝖾𝖽 𝖮𝗋 𝖠𝖽𝖽𝖾𝖽 𝖳𝗈 𝖬𝗒 𝖣𝖺𝗍𝖺𝖻𝖺𝗌𝖾 🤐')
             await asyncio.sleep(10)
             await k.delete()
 
@@ -177,14 +177,14 @@ async def cb_handler(client: Client, query: CallbackQuery):
                     "I'm not connected to any groups!\nCheck /connections or connect to any groups",
                     quote=True
                 )
-                return await query.answer('Piracy Is Crime')
+                return await query.answer('⚠️ 𝖩𝗈𝗂𝗇 𝖮𝗎𝗋 𝖮𝖿𝖿𝗂𝖼𝗂𝖺𝗅 𝖢𝗁𝖺𝗇𝗇𝖾𝗅 𝖥𝗈𝗋 𝖭𝖾𝗐 𝖴𝗉𝖽𝖺𝗍𝖾𝗌 ⚠️')
 
         elif chat_type in ["group", "supergroup"]:
             grp_id = query.message.chat.id
             title = query.message.chat.title
 
         else:
-            return await query.answer('Piracy Is Crime')
+            return await query.answer('⚠️ 𝖩𝗈𝗂𝗇 𝖮𝗎𝗋 𝖮𝖿𝖿𝗂𝖼𝗂𝖺𝗅 𝖢𝗁𝖺𝗇𝗇𝖾𝗅 𝖥𝗈𝗋 𝖭𝖾𝗐 𝖴𝗉𝖽𝖺𝗍𝖾𝗌 ⚠️')
 
         st = await client.get_chat_member(grp_id, userid)
         if (st.status == "creator") or (str(userid) in ADMINS):
@@ -209,7 +209,7 @@ async def cb_handler(client: Client, query: CallbackQuery):
                 except:
                     pass
             else:
-                await query.answer("That's not for you!!", show_alert=True)
+                await query.answer("𝖳𝗁𝖺𝗍'𝗌 𝖭𝗈𝗍 𝖥𝗈𝗋 𝖸𝗈𝗎 𝖬𝗒 𝖥𝗋𝗂𝖾𝗇𝖽 😷", show_alert=True)
     elif "groupcb" in query.data:
         await query.answer()
 
@@ -238,7 +238,7 @@ async def cb_handler(client: Client, query: CallbackQuery):
             reply_markup=keyboard,
             parse_mode="md"
         )
-        return await query.answer('Piracy Is Crime')
+        return await query.answer('⚠️ 𝖩𝗈𝗂𝗇 𝖮𝗎𝗋 𝖮𝖿𝖿𝗂𝖼𝗂𝖺𝗅 𝖢𝗁𝖺𝗇𝗇𝖾𝗅 𝖥𝗈𝗋 𝖭𝖾𝗐 𝖴𝗉𝖽𝖺𝗍𝖾𝗌 ⚠️')
     elif "connectcb" in query.data:
         await query.answer()
 
@@ -259,7 +259,7 @@ async def cb_handler(client: Client, query: CallbackQuery):
             )
         else:
             await query.message.edit_text('Some error occurred!!', parse_mode="md")
-        return await query.answer('Piracy Is Crime')
+        return await query.answer('⚠️ 𝖩𝗈𝗂𝗇 𝖮𝗎𝗋 𝖮𝖿𝖿𝗂𝖼𝗂𝖺𝗅 𝖢𝗁𝖺𝗇𝗇𝖾𝗅 𝖥𝗈𝗋 𝖭𝖾𝗐 𝖴𝗉𝖽𝖺𝗍𝖾𝗌 ⚠️')
     elif "disconnect" in query.data:
         await query.answer()
 
@@ -282,7 +282,7 @@ async def cb_handler(client: Client, query: CallbackQuery):
                 f"Some error occurred!!",
                 parse_mode="md"
             )
-        return await query.answer('Piracy Is Crime')
+        return await query.answer('⚠️ 𝖩𝗈𝗂𝗇 𝖮𝗎𝗋 𝖮𝖿𝖿𝗂𝖼𝗂𝖺𝗅 𝖢𝗁𝖺𝗇𝗇𝖾𝗅 𝖥𝗈𝗋 𝖭𝖾𝗐 𝖴𝗉𝖽𝖺𝗍𝖾𝗌 ⚠️')
     elif "deletecb" in query.data:
         await query.answer()
 
@@ -300,7 +300,7 @@ async def cb_handler(client: Client, query: CallbackQuery):
                 f"Some error occurred!!",
                 parse_mode="md"
             )
-        return await query.answer('Piracy Is Crime')
+        return await query.answer('⚠️ 𝖩𝗈𝗂𝗇 𝖮𝗎𝗋 𝖮𝖿𝖿𝗂𝖼𝗂𝖺𝗅 𝖢𝗁𝖺𝗇𝗇𝖾𝗅 𝖥𝗈𝗋 𝖭𝖾𝗐 𝖴𝗉𝖽𝖺𝗍𝖾𝗌 ⚠️')
     elif query.data == "backcb":
         await query.answer()
 
@@ -311,7 +311,7 @@ async def cb_handler(client: Client, query: CallbackQuery):
             await query.message.edit_text(
                 "There are no active connections!! Connect to some groups first.",
             )
-            return await query.answer('Piracy Is Crime')
+            return await query.answer('⚠️ 𝖩𝗈𝗂𝗇 𝖮𝗎𝗋 𝖮𝖿𝖿𝗂𝖼𝗂𝖺𝗅 𝖢𝗁𝖺𝗇𝗇𝖾𝗅 𝖥𝗈𝗋 𝖭𝖾𝗐 𝖴𝗉𝖽𝖺𝗍𝖾𝗌 ⚠️')
         buttons = []
         for groupid in groupids:
             try:
@@ -432,13 +432,13 @@ async def cb_handler(client: Client, query: CallbackQuery):
                 msg = await client.send_cached_media(
                 chat_id=REDIRECT_TO,
                 file_id=file_id,
-                caption=f'<b>Hai 👋 {query.from_user.mention}</b> 😍\n\n<code>{title}</code>\n\n⚠️ This Message Will Be Auto-Deleted In Next 5 Minutes T𝘰 Avoid Copyright Issues.So Forward This File To Anywhere Else Before Downloading..!!!</i>\n\n<b>╔════ ᴊᴏɪɴ ᴡɪᴛʜ ᴜs ═════╗\n⚠️ 𝙅𝙊𝙄𝙉 :- @SeriesxOfficial\n♻️ 𝙅𝙊𝙄𝙉 :- @Seriezx2\n╚════ ᴊᴏɪɴ ᴡɪᴛʜ ᴜs ═════╝</b>',
+                caption=f'<b>Hai 👋 {query.from_user.mention}</b> 😍\n\n<code>{title}</code>\n\n⚠️ This Message Will Be Auto-Deleted In Next 5 Minutes T𝘰 Avoid Copyright Issues.So Forward This File To Anywhere Else Before Downloading..!!!</i>\n\n<b>╔════ ᴊᴏɪɴ ᴡɪᴛʜ ᴜs ═════╗\n⚠️ 𝙅𝙊𝙄𝙉 :-  @MC_DVDUPDATES\n♻️ 𝙅𝙊𝙄𝙉 :- @MovieClubOfficiall\n╚════ ᴊᴏɪɴ ᴡɪᴛʜ ᴜs ═════╝</b>',
                 protect_content=True if ident == "filep" else False 
             )
             msg1 = await query.message.reply(
                 f'<b> Hai 👋 {query.from_user.mention} </b>😍\n\n<b>📫 Your File is Ready</b>\n\n'           
-                f'<b>📂 Sᴇʀɪᴇs Nᴀᴍᴇ</b> : <code>{title}</code>\n\n'              
-                f'<b>⚙️ Sᴇʀɪᴇs Sɪᴢᴇ</b> : <b>{size}</b>',
+                f'<b>📂 Mᴏᴠɪᴇ Nᴀᴍᴇ</b> : <code>{title}</code>\n\n'              
+                f'<b>⚙️ Mᴏᴠɪᴇ Sɪᴢᴇ</b> : <b>{size}</b>',
                 True,
                 'html',
                 reply_markup=InlineKeyboardMarkup(
@@ -502,8 +502,7 @@ async def cb_handler(client: Client, query: CallbackQuery):
         await query.answer()
     elif query.data == "start":
         buttons = [[
-        InlineKeyboardButton('💠 Channel', url='https://t.me/SeriesXOfficial'),
-        InlineKeyboardButton('♻️ Group', url ='https://t.me/SeriesLandChat')
+        InlineKeyboardButton('⭕️ Join Our Channel ⭕️', url='https://t.me/MovieClubOfficiall')
     ]]
         reply_markup = InlineKeyboardMarkup(buttons)
         await query.message.delete()
@@ -526,7 +525,7 @@ async def cb_handler(client: Client, query: CallbackQuery):
                 ),
                 reply_markup=reply_markup
             )
-        await query.answer('Piracy Is Crime')
+        await query.answer('⚠️ 𝖩𝗈𝗂𝗇 𝖮𝗎𝗋 𝖮𝖿𝖿𝗂𝖼𝗂𝖺𝗅 𝖢𝗁𝖺𝗇𝗇𝖾𝗅 𝖥𝗈𝗋 𝖭𝖾𝗐 𝖴𝗉𝖽𝖺𝗍𝖾𝗌 ⚠️')
     elif query.data == "help":
         buttons = [[
             InlineKeyboardButton('𝖥𝗂𝗅𝗍𝖾𝗋', callback_data='hud'),
@@ -947,7 +946,7 @@ async def cb_handler(client: Client, query: CallbackQuery):
 
         if str(grp_id) != str(grpid):
             await query.message.edit("Your Active Connection Has Been Changed. Go To /settings.")
-            return await query.answer('Piracy Is Crime')
+            return await query.answer('⚠️ 𝖩𝗈𝗂𝗇 𝖮𝗎𝗋 𝖮𝖿𝖿𝗂𝖼𝗂𝖺𝗅 𝖢𝗁𝖺𝗇𝗇𝖾𝗅 𝖥𝗈𝗋 𝖭𝖾𝗐 𝖴𝗉𝖽𝖺𝗍𝖾𝗌 ⚠️')
 
         if status == "True" or status == "Chat":
             await save_group_settings(grpid, set_type, False)
@@ -1003,8 +1002,8 @@ async def cb_handler(client: Client, query: CallbackQuery):
     elif query.data == "close":
         await query.message.delete()
     elif query.data == 'tips':
-        await query.answer("=> Ask with correct spelling 🚸\n=> Don't ask movies in this group 😁\n=>click only once on the filter Buttons ⚠️", True)
-    try: await query.answer('Piracy Is Crime') 
+        await query.answer("🔖 𝖠𝗌𝗄 𝖶𝗂𝗍𝗁 correct spelling \n🔖 𝖣on't ask movies those are not released in OTT 𝖮𝗋 𝖣𝖵𝖣 𝖱𝖾𝗅𝖾𝖺𝗌𝖾𝖽 \n🔖 click only once on the filter Button𝗌", True)
+    try: await query.answer('⚠️ 𝖩𝗈𝗂𝗇 𝖮𝗎𝗋 𝖮𝖿𝖿𝗂𝖼𝗂𝖺𝗅 𝖢𝗁𝖺𝗇𝗇𝖾𝗅 𝖥𝗈𝗋 𝖭𝖾𝗐 𝖴𝗉𝖽𝖺𝗍𝖾𝗌 ⚠️') 
     except: pass
 
 
@@ -1060,13 +1059,13 @@ async def auto_filter(client, msg: pyrogram.types.Message, spoll=False):
 
     btn.insert(0, 
         [
-            InlineKeyboardButton(f'🔰 {search} 🔰', 'dupe')
+            InlineKeyboardButton(f'📣 {search} 📣', 'dupe')
         ]
     )
     btn.insert(1,
         [
-            InlineKeyboardButton(f'📁 Files: {total_results}', 'dupe'),
-            InlineKeyboardButton(f'‼️ Tips', 'tips')
+            InlineKeyboardButton(f'📁 𝖳𝗈𝗍𝖺𝗅 𝖥𝗂𝗅𝖾𝗌: {total_results}', 'dupe'),
+            InlineKeyboardButton(f'Tips 😜', 'tips')
         ]
     )
 
@@ -1119,7 +1118,7 @@ async def auto_filter(client, msg: pyrogram.types.Message, spoll=False):
             **locals()
         )
     else:
-        cap = f"👮‍♂ ɴᴏᴛɪᴄᴇ :ɪ𝙵 ʏᴏᴜ ᴅᴏ ɴᴏᴛ sᴇᴇ ᴛʜᴇ 𝙵ɪʟᴇ𝚂 ᴏ𝙵 ᴛʜɪ𝚂 ᴍᴏᴠɪᴇ ʏᴏᴜ ᴀ𝚂ᴋᴇᴅ 𝙵ᴏʀ. ʟᴏᴏᴋ ᴀᴛ ɴᴇ𝚇ᴛ ᴘᴀɢᴇ🔎\n©️քօաɛʀɛɖ ɮʏ :{message.chat.title}"
+        cap = f"<b>🎬 Title : {search}\n🌟 8.7/10 | IMDb\n🎭 Genres: Document, Drama, Thriller\n👤 Requested By: {message.from_user.mention}\n\n© By {message.chat.title}</b>"
     if imdb and imdb.get('poster'):
         try:
             fmsg = await message.reply_photo(photo=imdb.get('poster'), caption=cap[:1024],
@@ -1130,9 +1129,9 @@ async def auto_filter(client, msg: pyrogram.types.Message, spoll=False):
             fmsg = await message.reply_photo(photo=poster, caption=cap[:1024], reply_markup=InlineKeyboardMarkup(btn))
         except Exception as e:
             logger.exception(e)
-            fmsg = await message.reply_text(cap, reply_markup=InlineKeyboardMarkup(btn))
+            fmsg = await message.reply_photo(photo="https://telegra.ph/file/7ecd6795ad080b08c8bc6.jpg", caption=cap, reply_markup=InlineKeyboardMarkup(btn))
     else:
-        fmsg = await message.reply_text(cap, reply_markup=InlineKeyboardMarkup(btn))
+        fmsg = await message.reply_photo(photo="https://telegra.ph/file/7ecd6795ad080b08c8bc6.jpg", caption=cap, reply_markup=InlineKeyboardMarkup(btn))
     
     await asyncio.sleep(DELETE_TIME)
     await fmsg.delete()
@@ -1179,13 +1178,13 @@ async def advantage_spell_chok(msg):
     movielist += [(re.sub(r'(\-|\(|\)|_)', '', i, flags=re.IGNORECASE)).strip() for i in gs_parsed]
     movielist = list(dict.fromkeys(movielist))  # removing duplicates
     if not movielist:
-        k = await msg.reply("Google, click on button labeled Google and find the correct series name and enter it here...\n\nIf you still do not get it. Series Name & year after @admin. Example: Add @admin 𝖲𝗍𝗋𝖺𝗇𝗀𝖾𝗋 𝖳𝗁𝗂𝗇𝗀𝗌 to the group in this way. The admin will upload it.")
+        k = await msg.reply("Google, click on button labeled Google and find the correct Movie name and enter it here...")
         await asyncio.sleep(8)
         await k.delete()
         return
     SPELL_CHECK[msg.message_id] = movielist
     btn = [InlineKeyboardButton(text="🔍ɢᴏᴏɢʟᴇ🔎", url=f'https://google.com/search?q={query}')]
-    await msg.reply("Google, click on button labeled Google and find the correct series name and enter it here...\n\nIf you still do not get it. Series Name & year after @admin. Example: Add @admin 𝖲𝗍𝗋𝖺𝗇𝗀𝖾𝗋 𝖳𝗁𝗂𝗇𝗀𝗌 to the group in this way. The admin will upload it",
+    await msg.reply("Google, click on button labeled Google and find the correct Movie name and enter it here...",
                     reply_markup=InlineKeyboardMarkup(btn))
 
 async def manual_filters(client, message, text=False):
