@@ -12,7 +12,7 @@ glitch_this
 googletrans==4.0.0-rc1
 gTTS
 humanize
-imdbpy
+imdbpy==2021.4.18
 marshmallow==3.14.1
 motor==2.5.1
 NumPy
